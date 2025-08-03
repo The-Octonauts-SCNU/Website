@@ -1,25 +1,26 @@
-/* 通用字体与布局 */
+/* 全局字体与基础设置 */
 body {
-  margin: 0;
   font-family: 'Noto Sans SC', sans-serif;
-  background-color: #f4f6f9;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
   color: #333;
+  line-height: 1.6;
 }
 
+/* 容器 */
 .container {
-  width: 90%;
-  max-width: 1000px;
-  margin: auto;
-  padding: 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-/* 头部样式 */
+/* 页眉样式 */
 header {
-  background: linear-gradient(to right, #4facfe, #00f2fe);
+  background-color: #005f73;
   color: white;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 header h1 {
@@ -32,72 +33,71 @@ nav {
 }
 
 nav a {
-  color: white;
-  margin: 0 0.75rem;
+  color: #ffd166;
+  margin: 0 1rem;
   text-decoration: none;
   font-weight: bold;
-  transition: opacity 0.2s;
 }
 
 nav a:hover {
-  opacity: 0.85;
+  text-decoration: underline;
 }
 
-/* 资源展示区 */
+/* 主体内容 */
+main {
+  background: white;
+  padding: 2rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
 .intro h2 {
-  font-size: 1.5rem;
-  margin-top: 2rem;
+  color: #0077b6;
+  font-size: 1.4rem;
   margin-bottom: 1rem;
-  color: #333;
 }
 
 .resource-list {
   list-style: none;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
 }
 
 .resource-list li {
-  background: white;
-  border-radius: 10px;
-  padding: 1rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease;
-}
-
-.resource-list li:hover {
-  transform: translateY(-3px);
+  margin-bottom: 1rem;
 }
 
 .resource-list a {
+  color: #023e8a;
   text-decoration: none;
-  color: #007acc;
-  font-weight: 500;
-  display: block;
+  font-size: 1.1rem;
+}
+
+.resource-list a:hover {
+  text-decoration: underline;
 }
 
 /* 页脚 */
 footer {
-  background-color: #222;
-  color: #ccc;
-  padding: 1rem 0;
   text-align: center;
-  margin-top: 2rem;
   font-size: 0.9rem;
+  padding: 1rem 0;
+  background-color: #e0e0e0;
+  margin-top: 2rem;
 }
 
-/* 响应式优化 */
+/* 响应式支持 */
 @media (max-width: 600px) {
   header h1 {
-    font-size: 1.4rem;
-    padding: 0 1rem;
+    font-size: 1.2rem;
   }
 
   nav a {
-    display: inline-block;
-    margin: 0.5rem 0.4rem;
-    font-size: 0.9rem;
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  main {
+    padding: 1rem;
   }
 }
