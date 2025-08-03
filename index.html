@@ -1,30 +1,49 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Octonauts - 资源共享站</title>
-  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <header>
-    <h1>The Octonauts 📚</h1>
-    <nav>
-      <a href="docs.html">📘 文档资源</a>
-      <a href="software.html">💻 软件工具</a>
-      <a href="templates.html">📂 模板集合</a>
-    </nav>
+    <div class="container">
+      <h1>The Octonauts Share 📚</h1>
+      <nav>
+        <a href="docs.html">📘 文档资源</a>
+        <a href="software.html">💻 软件工具</a>
+        <a href="templates.html">📂 模板集合</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h2>🔥 推荐资源</h2>
-    <ul>
-      <li><a href="https://pan.baidu.com/s/xxxx" target="_blank">Keil5 安装包（含教程）</a></li>
-      <li><a href="https://github.com/zhaoran/embedded-docs" target="_blank">STM32 开发文档合集</a></li>
-    </ul>
+  <main class="container">
+    <section class="intro">
+      <h2>🔥 推荐资源</h2>
+      <ul class="resource-list">
+        <li>
+          <a href="https://pan.baidu.com/s/xxxx" target="_blank" rel="noopener noreferrer">
+            Keil5 安装包（含教程）
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/zhaoran/embedded-docs" target="_blank" rel="noopener noreferrer">
+            STM32 开发文档合集
+          </a>
+        </li>
+      </ul>
+    </section>
   </main>
 
   <footer>
-    <p>© 2025 ZhaoShare. Powered by HTML & GitHub Pages</p>
+    <div class="container">
+      <p>© 2025 The Octonauts. Powered by HTML & GitHub Pages</p>
+    </div>
   </footer>
 </body>
 </html>
