@@ -1,19 +1,123 @@
+/* Reset一些基础 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 40px;
-  background-color: #f6f6f6;
+  font-family: 'Noto Sans SC', sans-serif;
+  background: #f0f4f8;
   color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
+
+/* 容器限制宽度 */
+.container {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* 头部 */
 header {
-  background-color: #4b79a1;
+  background-color: #2c3e50;
   color: white;
-  padding: 10px 20px;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+
+header h1 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
 nav a {
-  margin-right: 20px;
-  color: white;
+  color: #ecf0f1;
   text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
+
+nav a:hover,
+nav a:focus {
+  color: #3498db;
+  outline: none;
+}
+
+/* 主要内容 */
 main {
-  margin-top: 20px;
+  flex: 1;
+  padding: 40px 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  margin: 20px auto;
+}
+
+.intro h2 {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  color: #34495e;
+  border-left: 4px solid #3498db;
+  padding-left: 12px;
+}
+
+.resource-list {
+  list-style-type: none;
+}
+
+.resource-list li {
+  background: #e9f0f8;
+  margin-bottom: 12px;
+  padding: 12px 18px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.resource-list li:hover {
+  background-color: #d0e6fb;
+}
+
+.resource-list a {
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.resource-list a:hover,
+.resource-list a:focus {
+  text-decoration: underline;
+  color: #2980b9;
+  outline: none;
+}
+
+/* 页脚 */
+footer {
+  background-color: #2c3e50;
+  color: #bdc3c7;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+/* 响应式 */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  main {
+    padding: 20px 10px;
+  }
 }
