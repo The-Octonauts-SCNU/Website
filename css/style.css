@@ -1,19 +1,25 @@
-/* 通用设置 */
+/* 通用字体与布局 */
 body {
-  font-family: "Segoe UI", sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #f9fafc;
+  font-family: 'Noto Sans SC', sans-serif;
+  background-color: #f4f6f9;
   color: #333;
-  line-height: 1.6;
 }
 
-/* 页眉样式 */
-header {
-  background-color: #2e6da4;
-  color: white;
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
   padding: 1rem;
+}
+
+/* 头部样式 */
+header {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: white;
+  padding: 1.5rem 0;
   text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 header h1 {
@@ -21,84 +27,77 @@ header h1 {
   font-size: 1.8rem;
 }
 
-/* 导航栏样式 */
 nav {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 nav a {
-  color: #fff;
+  color: white;
+  margin: 0 0.75rem;
   text-decoration: none;
-  margin: 0 1rem;
   font-weight: bold;
-  display: inline-block;
+  transition: opacity 0.2s;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  opacity: 0.85;
 }
 
-/* 主体内容 */
-main {
-  padding: 2rem 1rem;
-  max-width: 800px;
-  margin: auto;
+/* 资源展示区 */
+.intro h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
 }
 
-.resource-list ul {
+.resource-list {
   list-style: none;
   padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
 }
 
 .resource-list li {
-  background: #fff;
+  background: white;
+  border-radius: 10px;
   padding: 1rem;
-  margin: 1rem 0;
-  border-left: 5px solid #2e6da4;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.resource-list li:hover {
+  transform: translateY(-3px);
 }
 
 .resource-list a {
   text-decoration: none;
-  color: #2e6da4;
-  font-size: 1.1rem;
+  color: #007acc;
+  font-weight: 500;
+  display: block;
 }
 
-.resource-list a:hover {
-  text-decoration: underline;
-}
-
-/* 页脚样式 */
+/* 页脚 */
 footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 1rem 0;
   text-align: center;
-  padding: 1rem;
-  background-color: #f0f0f0;
+  margin-top: 2rem;
   font-size: 0.9rem;
-  color: #666;
 }
 
-/* ✅ 响应式布局：小屏设备优化 */
+/* 响应式优化 */
 @media (max-width: 600px) {
   header h1 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    padding: 0 1rem;
   }
 
   nav a {
-    display: block;
-    margin: 0.5rem 0;
-  }
-
-  .resource-list li {
-    padding: 0.8rem;
-    font-size: 0.95rem;
-  }
-
-  .resource-list a {
-    font-size: 1rem;
-  }
-
-  main {
-    padding: 1.2rem 1rem;
+    display: inline-block;
+    margin: 0.5rem 0.4rem;
+    font-size: 0.9rem;
   }
 }
