@@ -1,27 +1,28 @@
-/* Reset & 基础 */
+/* ========== Reset & 基础样式 ========== */
 * {
   box-sizing: border-box;
 }
 body {
   margin: 0;
-  font-family: 'Noto Sans SC', sans-serif;
-  background: linear-gradient(135deg, #d0f0f7, #a0d8ef);
-  color: #084c61;
+  font-family: 'Segoe UI', 'Noto Sans SC', sans-serif;
+  background: linear-gradient(135deg, #e3f2fd, #f8f9fa);
+  color: #333;
   line-height: 1.6;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  transition: background 0.5s ease, color 0.5s ease;
 }
 a {
   text-decoration: none;
-  color: #0277bd;
-  transition: color 0.3s ease;
+  color: #3f51b5;
+  transition: 0.3s ease;
 }
 a:hover {
-  color: #014f86;
+  color: #1a237e;
 }
 
-/* 容器 */
+/* ========== 容器 ========== */
 .container {
   max-width: 960px;
   margin: 0 auto;
@@ -31,106 +32,107 @@ a:hover {
   flex-direction: column;
 }
 
-/* 头部 */
+/* ========== 头部 ========== */
 header {
-  background-color: #039be5;
-  color: #e1f5fe;
-  padding: 1.5rem 0;
-  box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+  background: rgba(255, 255, 255, 0.85);
+  color: #1a237e;
+  padding: 2rem 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  border-bottom: 2px solid #cfd8dc;
   text-align: center;
-  border-bottom: 3px solid #0277bd;
+  backdrop-filter: blur(6px);
 }
 header h1 {
   margin: 0;
-  font-weight: 700;
-  font-size: 2rem;
+  font-size: 2.4rem;
+  font-weight: 800;
   letter-spacing: 0.05em;
 }
 nav {
   margin-top: 1rem;
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.2rem;
   flex-wrap: wrap;
 }
 nav a {
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  background: rgba(63, 81, 181, 0.1);
   font-weight: 600;
-  padding: 0.3rem 0.75rem;
-  border-radius: 6px;
-  background: rgba(255 255 255 / 0.25);
-  box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
-  user-select: none;
-  transition: background-color 0.25s ease;
+  color: #3f51b5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
 }
 nav a:hover {
-  background-color: #014f86;
-  color: #e1f5fe;
+  background: #3f51b5;
+  color: white;
 }
 
-/* 主要内容 */
+/* ========== 主体内容 ========== */
 main {
   padding: 2rem 0;
   flex-grow: 1;
 }
 .intro h2 {
-  font-size: 1.6rem;
-  border-left: 6px solid #0277bd;
-  padding-left: 0.5rem;
+  font-size: 1.8rem;
   margin-bottom: 1rem;
-  font-weight: 700;
-  color: #0277bd;
+  color: #3f51b5;
+  border-left: 6px solid #5c6bc0;
+  padding-left: 0.6rem;
 }
+
 .resource-list {
   list-style: none;
   padding: 0;
   margin: 0 0 2rem 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
 }
 .resource-list li {
-  background: #e1f5fe;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
-  padding: 1rem 1.25rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+  padding: 1.2rem 1.4rem;
   display: flex;
   align-items: center;
+  backdrop-filter: blur(5px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .resource-list li:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgb(0 0 0 / 0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.15);
 }
 .resource-list a {
   font-size: 1.1rem;
-  color: #01579b;
+  color: #303f9f;
   flex-grow: 1;
-  user-select: text;
 }
 .resource-list a::before {
-  content: "📁 ";
+  content: "📎 ";
   margin-right: 0.5rem;
 }
 
-/* 页脚 */
+/* ========== 页脚 ========== */
 footer {
-  background-color: #0277bd;
-  color: #b3e5fc;
+  background: #3f51b5;
+  color: #e8eaf6;
   text-align: center;
   padding: 1rem 0;
-  font-size: 0.9rem;
-  border-top: 3px solid #014f86;
+  font-size: 0.95rem;
+  border-top: 3px solid #1a237e;
   user-select: none;
 }
 
-/* 响应式调整 */
+/* ========== 响应式 ========== */
 @media (max-width: 600px) {
   header h1 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     padding: 0 1rem;
   }
   nav {
-    gap: 1rem;
+    gap: 0.75rem;
   }
   .resource-list {
     grid-template-columns: 1fr;
