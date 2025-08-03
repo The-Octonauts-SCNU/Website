@@ -8,13 +8,94 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/style.css" />
+  <!-- Style -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Sans SC', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header, footer {
+      background-color: #004080;
+      color: white;
+      padding: 1rem 0;
+    }
+
+    header h1, footer p {
+      margin: 0;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    h2 {
+      border-bottom: 2px solid #004080;
+      padding-bottom: 0.25rem;
+    }
+
+    .resource-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .resource-list li {
+      margin-bottom: 0.75rem;
+    }
+
+    .resource-list a {
+      text-decoration: none;
+      color: #004080;
+      background-color: #e6f0ff;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+
+    .resource-list a:hover {
+      background-color: #cce0ff;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="container">
-      <h1>The Octonauts Share （SCNU）  
-        海底小纵队资源共享站📚</h1>
+      <h1>The Octonauts Share（SCNU）海底小纵队资源共享站 📚</h1>
       <nav>
         <a href="docs.html">📘 文档资源</a>
         <a href="software.html">💻 软件工具</a>
