@@ -7,19 +7,19 @@
 
 html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-  background-color: #f5f5f5;
+  background-color: #ffffff;
+  color: #111;
   scroll-behavior: smooth;
 }
 
 body {
-  color: #111;
-  line-height: 1.8;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  line-height: 1.8;
 }
 
-/* ========== LAYOUT ========== */
+/* ========== CONTAINER ========== */
 .container {
   width: 100%;
   max-width: 1100px;
@@ -31,7 +31,7 @@ body {
 /* ========== HEADER ========== */
 header {
   background: #000;
-  color: white;
+  color: #fff;
   padding: 1.8rem 1rem;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -42,7 +42,7 @@ header {
 
 header h1 {
   font-size: 2.2rem;
-  font-weight: 600;
+  font-weight: bold;
   letter-spacing: 1px;
 }
 
@@ -50,16 +50,17 @@ nav {
   margin-top: 1rem;
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1.2rem;
   flex-wrap: wrap;
 }
 
 nav a {
-  color: white;
+  color: #fff;
   border: 1px solid #fff;
-  padding: 0.4rem 0.9rem;
+  padding: 0.45rem 1rem;
   border-radius: 6px;
-  transition: 0.3s;
+  text-decoration: none;
+  transition: all 0.3s ease;
   font-weight: 500;
 }
 
@@ -68,7 +69,7 @@ nav a:hover {
   color: #000;
 }
 
-/* ========== MAIN SECTION ========== */
+/* ========== MAIN ========== */
 main h2 {
   font-size: 1.8rem;
   margin-bottom: 1.2rem;
@@ -80,38 +81,35 @@ main h2 {
 /* 卡片区域 */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
 
 .card {
-  background: white;
+  background: #fff;
   padding: 1.2rem 1rem;
   border-radius: 10px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e1e1e1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  border: 1px solid #eee;
 }
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
 }
 
 .card a {
   color: #111;
   font-weight: 500;
   font-size: 1rem;
+  text-decoration: none;
   word-break: break-word;
 }
 
 .card a::before {
   content: "📄 ";
-  margin-right: 4px;
 }
 
 /* ========== FOOTER ========== */
@@ -132,7 +130,7 @@ footer {
   }
 
   nav {
-    gap: 1rem;
+    gap: 0.8rem;
   }
 
   main h2 {
