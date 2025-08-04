@@ -36,13 +36,19 @@
   </div>
 
   <script>
-    function handleLogin(event) {
-      event.preventDefault();
-      const user = document.getElementById('username').value;
-      alert(`欢迎，${user}！登录成功（开发中...）`);
-      window.location.href = 'index.html';
-    }
+   function handleLogin(event) {
+     event.preventDefault();
+     const user = document.getElementById('username').value;
+    
+     // 保存登录状态
+     localStorage.setItem("loggedIn", "true");
+     localStorage.setItem("username", user);
+
+     alert(`欢迎，${user}！登录成功 ✅`);
+     window.location.href = "index.html";
+      }
   </script>
+
 </body>
 </html>
 
