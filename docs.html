@@ -24,8 +24,8 @@
 
     <main>
       <ul class="resource-list" id="resource-list">
-        <li><a href="https://example.com/doc1.pdf" target="_blank">📄 嵌入式入门指南</a></li>
-        <li><a href="https://example.com/doc2.pdf" target="_blank">📄 STM32 启动配置详解</a></li>
+        <li><a href="#" onclick="downloadResource('嵌入式入门指南', 'https://example.com/doc1.pdf')">📄 嵌入式入门指南</a></li>
+        <li><a href="#" onclick="downloadResource('STM32 启动配置详解', 'https://example.com/doc2.pdf')">📄 STM32 启动配置详解</a></li>
         <!-- 更多资源 -->
       </ul>
     </main>
@@ -36,6 +36,7 @@
   </div>
 
   <script>
+    // 搜索功能
     function searchResources() {
       const input = document.getElementById("search-input").value.toLowerCase();
       const items = document.querySelectorAll("#resource-list li");
@@ -44,6 +45,18 @@
         const text = item.textContent.toLowerCase();
         item.style.display = text.includes(input) ? "block" : "none";
       });
+    }
+
+    // 登录检查 & 资源下载
+    function downloadResource(name, url) {
+      const isLoggedIn = localStorage.getItem("loggedIn");
+
+      if (isLoggedIn === "true") {
+        window.open(url, "_blank");
+      } else {
+        alert(`请先登录后才能下载《${name}》📄`);
+        window.location.href = "login.html";
+      }
     }
   </script>
 </body>
