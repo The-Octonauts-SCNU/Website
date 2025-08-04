@@ -1,4 +1,4 @@
-/* 引入中文字体 */
+/* 中文字体 */
 body {
   font-family: 'Noto Sans SC', sans-serif;
   margin: 0;
@@ -25,7 +25,7 @@ body::before {
   transform: scale(1.1);
 }
 
-/* 布局容器 */
+/* 页面容器 */
 .container {
   max-width: 960px;
   margin: 40px auto;
@@ -35,7 +35,7 @@ body::before {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* 头部样式 */
+/* 标题样式 */
 header h1 {
   font-size: 2rem;
   text-align: center;
@@ -43,6 +43,7 @@ header h1 {
   color: #3f3d56;
 }
 
+/* 顶部导航栏 */
 nav {
   display: flex;
   justify-content: center;
@@ -64,13 +65,40 @@ nav a:hover {
   background-color: #5a54cc;
 }
 
-/* 主内容区 */
-.intro h2 {
-  font-size: 1.5rem;
-  margin-top: 30px;
-  color: #444;
+/* 搜索栏 */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
+.search-container input {
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.search-container button {
+  padding: 8px 16px;
+  font-size: 1rem;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-container button:hover {
+  background-color: #5a54cc;
+}
+
+/* 资源列表 */
 .resource-list {
   list-style: none;
   padding: 0;
@@ -94,7 +122,7 @@ nav a:hover {
   background-color: #c7d2fe;
 }
 
-/* 页脚 */
+/* 页脚样式 */
 footer {
   text-align: center;
   font-size: 0.9rem;
@@ -102,7 +130,7 @@ footer {
   color: #666;
 }
 
-/* 响应式支持 */
+/* 响应式 */
 @media (max-width: 768px) {
   .container {
     margin: 20px;
@@ -118,7 +146,8 @@ footer {
     gap: 10px;
   }
 
-  .intro h2 {
-    font-size: 1.25rem;
+  .search-container {
+    flex-direction: column;
+    gap: 10px;
   }
 }
