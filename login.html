@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🔒 登录 - The Octonauts</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container login-container">
+    <header>
+      <h1>🔒 登录账户</h1>
+      <nav>
+        <a href="index.html">🏠 首页</a>
+        <a href="software.html">💻 软件工具</a>
+        <a href="templates.html">📂 模板集合</a>
+      </nav>
+    </header>
+
+    <main>
+      <form class="login-form" onsubmit="handleLogin(event)">
+        <label for="username">👤 用户名</label>
+        <input type="text" id="username" name="username" required />
+
+        <label for="password">🔑 密码</label>
+        <input type="password" id="password" name="password" required />
+
+        <button type="submit">登录</button>
+        <p class="tip">测试版：任意填写即可进入 🚀</p>
+      </form>
+    </main>
+
+    <footer>
+      <p>© 2025 The Octonauts. 保留所有权利。</p>
+    </footer>
+  </div>
+
+  <script>
+    function handleLogin(event) {
+      event.preventDefault();
+      const user = document.getElementById('username').value;
+      alert(`欢迎，${user}！登录成功（开发中...）`);
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>
+
