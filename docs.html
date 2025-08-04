@@ -2,52 +2,49 @@
 <html lang="zh">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>📘 文档资源 - Octonauts Share</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📘 文档资源 - The Octonauts</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>The Octonauts Share（SCNU）资源共享站📚</h1>
+  <div class="container">
+    <header>
+      <h1>📘 文档资源</h1>
       <nav>
         <a href="index.html">🏠 首页</a>
-        <a href="docs.html">📘 文档资源</a>
         <a href="software.html">💻 软件工具</a>
         <a href="templates.html">📂 模板集合</a>
+        <a href="login.html">🔒 登录</a>
       </nav>
-    </div>
-  </header>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="🔍 搜索资源..." />
+        <button onclick="searchResources()">搜索</button>
+      </div>
+    </header>
 
-  <main class="container">
-    <section class="intro">
-      <h2>📘 文档资源</h2>
-      <p>以下是精选的学习笔记、讲义、课件等，支持云端访问或下载：</p>
-
-      <ul class="resource-list">
-        <li>
-          <a href="assets/main.py" download>📄 考试资料地址</a>           
-          </a>
-        </li>
-        <li>
-          <a href="https://pan.baidu.com/s/yyyy" target="_blank" rel="noopener noreferrer">
-            📄《信号与系统讲义》 - PPT打包
-          </a>
-        </li>
+    <main>
+      <ul class="resource-list" id="resource-list">
+        <li><a href="https://example.com/doc1.pdf" target="_blank">📄 嵌入式入门指南</a></li>
+        <li><a href="https://example.com/doc2.pdf" target="_blank">📄 STM32 启动配置详解</a></li>
+        <!-- 更多资源 -->
       </ul>
-    </section>
-  </main>
+    </main>
 
-  <footer>
-    <div class="container">
+    <footer>
       <p>© 2025 The Octonauts. Powered by HTML & GitHub Pages</p>
-    </div>
-  </footer>
+    </footer>
+  </div>
+
+  <script>
+    function searchResources() {
+      const input = document.getElementById("search-input").value.toLowerCase();
+      const items = document.querySelectorAll("#resource-list li");
+
+      items.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(input) ? "block" : "none";
+      });
+    }
+  </script>
 </body>
 </html>
-
-
-
