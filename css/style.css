@@ -151,3 +151,49 @@ footer {
     gap: 10px;
   }
 }
+/* 登录页面样式增强 */
+.login-container {
+  max-width: 400px;
+  padding: 30px 40px;
+  margin-top: 100px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-form label {
+  font-weight: bold;
+  color: #333;
+}
+
+.login-form input {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.login-form button {
+  padding: 10px;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-form button:hover {
+  background-color: #5a54cc;
+}
+
+.login-form .tip {
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: -8px;
+  text-align: center;
+}
