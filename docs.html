@@ -5,57 +5,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>📘 文档资源 - The Octonauts</title>
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f2f3f7;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      text-align: center;
+    }
+    .password-form {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .password-form input {
+      padding: 8px 12px;
+      width: 250px;
+      font-size: 16px;
+      margin-right: 8px;
+    }
+    .password-form button {
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #resource-list {
+      display: none;
+      list-style: none;
+      padding: 0;
+    }
+    #resource-list li {
+      margin: 12px 0;
+    }
+    #error-msg {
+      color: red;
+      text-align: center;
+      display: none;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
     <header>
       <h1>📘 文档资源</h1>
-      <nav>
-        <a href="index.html">🏠 首页</a>
-        <a href="software.html">💻 软件工具</a>
-        <a href="templates.html">📂 模板集合</a>
-        <a href="login.html">🔒 登录</a>
-      </nav>
-      <div class="search-container">
-        <input type="text" id="search-input" placeholder="🔍 搜索资源..." />
-        <button onclick="searchResources()">搜索</button>
-      </div>
     </header>
 
-    <main>
-      <ul class="resource-list" id="resource-list">
-        <li><a href="#" onclick="downloadResource('嵌入式入门指南', 'https://example.com/doc1.pdf')">📄 嵌入式入门指南</a></li>
-        <li><a href="#" onclick="downloadResource('STM32 启动配置详解', 'https://example.com/doc2.pdf')">📄 STM32 启动配置详解</a></li>
-        <!-- 更多资源 -->
-      </ul>
-    </main>
+    <div class="password-form">
+      <input type="password" id="password-input" placeholder="🔑 请输入访问密码..." />
+      <button onclick="verifyPassword()">进入</button>
+    </div>
+    <p id="error-msg">密码错误，请重试 (*>﹏<*)</p>
 
-    <footer>
-      <p>© 2025 The Octonauts. Powered by HTML & GitHub Pages</p>
-    </footer>
+    <ul class="resource-list" id="resource-list">
+      <li><a href="https://example.com/doc1.pdf" target="_blank">📄 嵌入式入门指南</a></li>
+      <li><a href="https://example.com/doc2.pdf" target="_blank">📄 STM32 启动配置详解</a></li>
+      <!-- 更多资源 -->
+    </ul>
   </div>
 
   <script>
-    // 搜索功能
-    function searchResources() {
-      const input = document.getElementById("search-input").value.toLowerCase();
-      const items = document.querySelectorAll("#resource-list li");
+    const PASSWORD = "octopass123";
 
-      items.forEach(item => {
-        const text = item.textContent.toLowerCase();
-        item.style.display = text.includes(input) ? "block" : "none";
-      });
-    }
+    function verifyPassword() {
+      const input = document.getElementById("password-input").value;
+      const resourceList = document.getElementById("resource-list");
+      const errorMsg = document.getElementById("error-msg");
 
-    // 登录检查 & 资源下载
-    function downloadResource(name, url) {
-      const isLoggedIn = localStorage.getItem("loggedIn");
-
-      if (isLoggedIn === "true") {
-        window.open(url, "_blank");
+      if (input === PASSWORD) {
+        resourceList.style.display = "block";
+        errorMsg.style.display = "none";
       } else {
-        alert(`请先登录后才能下载《${name}》📄`);
-        window.location.href = "login.html";
+        resourceList.style.display = "none";
+        errorMsg.style.display = "block";
       }
     }
   </script>
