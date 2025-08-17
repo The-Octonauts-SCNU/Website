@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📘 文档资源 - The Octonauts</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f2f3f7;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      text-align: center;
+    }
+    .password-form {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .password-form input {
+      padding: 8px 12px;
+      width: 250px;
+      font-size: 16px;
+      margin-right: 8px;
+    }
+    .password-form button {
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #resource-list {
+      display: none;
+      list-style: none;
+      padding: 0;
+    }
+    #resource-list li {
+      margin: 12px 0;
+    }
+    #error-msg {
+      color: red;
+      text-align: center;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>软件工具</h1>
+    </header>
+
+    <div class="password-form">
+      <input type="password" id="password-input" placeholder="🔑 请输入访问密码..." />
+      <button onclick="verifyPassword()">进入</button>
+    </div>
+    <p id="error-msg">密码错误，请重试 (*>﹏<*)</p>
+
+    <ul class="resource-list" id="resource-list">
+
+
+
+      
+    </ul>
+  </div>
+
+  <script>
+    const PASSWORD = "9250";
+
+    function verifyPassword() {
+      const input = document.getElementById("password-input").value;
+      const resourceList = document.getElementById("resource-list");
+      const errorMsg = document.getElementById("error-msg");
+
+      if (input === PASSWORD) {
+        resourceList.style.display = "block";
+        errorMsg.style.display = "none";
+      } else {
+        resourceList.style.display = "none";
+        errorMsg.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>
+
+
