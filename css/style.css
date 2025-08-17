@@ -211,7 +211,7 @@ footer {
 
 .resource-list a {
   display: block;              /* 每个资源占一整行 */
-  width: 100%;                 /* 自动填满父容器 */
+  width: 75%;                 /* 自动填满父容器 */
   box-sizing: border-box;       /* 内边距不会撑大框 */
   text-decoration: none;
   color: #2a2a2a;
