@@ -197,3 +197,31 @@ footer {
   margin-top: -8px;
   text-align: center;
 }
+
+/* 资源列表 - 统一宽度和对齐 */
+.resource-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.resource-list li {
+  margin: 10px 0;
+}
+
+.resource-list a {
+  display: block;              /* 每个资源占一整行 */
+  width: 100%;                 /* 自动填满父容器 */
+  box-sizing: border-box;       /* 内边距不会撑大框 */
+  text-decoration: none;
+  color: #2a2a2a;
+  background-color: #e0e7ff;
+  padding: 12px 16px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.resource-list a:hover {
+  background-color: #c7d2fe;
+}
+
