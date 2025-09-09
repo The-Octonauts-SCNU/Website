@@ -228,3 +228,13 @@ footer {
   background-color: #c7d2fe;
 }
 
+.octonauts-link {
+  text-decoration: none;
+  color: inherit; /* 保持原有标题颜色 */
+  transition: all 0.3s ease; /* 平滑过渡 */
+}
+
+.octonauts-link:hover {
+  color: #0077ff;    /* 悬浮时变蓝色 */
+  transform: scale(1.08); /* 微微放大 */
+}
