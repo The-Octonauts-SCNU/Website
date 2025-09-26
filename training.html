@@ -64,11 +64,7 @@
       </p>
     </header>
 
-    <div class="password-form">
-      <input type="password" id="password-input" placeholder="🔑 请输入访问密码..." />
-      <button onclick="verifyPassword()">进入</button>
-    </div>
-    <p id="error-msg">密码错误，请重试 (*>﹏<*)</p>
+    
     <ul class="resource-list" id="resource-list">
     
       <!-- 🤖 机器人 / 嵌入式 -->
@@ -138,23 +134,7 @@
     </ul>
   </div>
 
-  <script>
-    const PASSWORD = "9250";
 
-    function verifyPassword() {
-      const input = document.getElementById("password-input").value;
-      const resourceList = document.getElementById("resource-list");
-      const errorMsg = document.getElementById("error-msg");
-
-      if (input === PASSWORD) {
-        resourceList.style.display = "block";
-        errorMsg.style.display = "none";
-      } else {
-        resourceList.style.display = "none";
-        errorMsg.style.display = "block";
-      }
-    }
-  </script>
 </body>
 </html>
 
